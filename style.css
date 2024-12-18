@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f4f8; /* Light background for the whole page */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #panel {
+    width: 80%;
+    height: 80%;
+    background-color: #ffffff; /* Clean white background for panel */
+    border-radius: 20px; /* Softer rounded corners */
+    overflow: hidden;
+    display: flex;
+    color: #333333; /* Dark text for better contrast */
+    flex-direction: column;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+  }
+  
+  #panelTop {
+    width: 100%;
+    height: 70px;
+    background-color: #ff7043; /* Warm orange for a modern and inviting look */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30%;
+    color: #ffffff; /* White text on warm orange background */
+  }
+  
+  #elem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  #elem h2 {
+    font-weight: 500; /* A bit bolder for better readability */
+  }
+  
+  .box {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #29b6f6; /* Bright sky blue for boxes */
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #panelBottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #eeeeee; /* Light grey background to separate from the top */
+  }
+  
+  .bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background-color: #ff5252; /* Vivid red for the bubble */
+    color: #ffffff; /* White text for high contrast */
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: opacity 0.5s ease;
+  }
+  
+  .bubble:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  .fade-out {
+    opacity: 0; /* This class will be used to fade out the bubbles */
+  }
+  
+  #gameOver {
+    animation: bounce 1s infinite; /* Bouncing animation for Game Over */
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
